@@ -1,8 +1,6 @@
 <template>
-    <section>
         <!-- https://stackoverflow.com/questions/48847644/how-to-bind-img-src-to-data-in-vue -->
         <img v-bind:src="require('../../public/'+ stackedChart)">
-    </section>
 </template>
 
 <script>

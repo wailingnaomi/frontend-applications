@@ -17,10 +17,6 @@ export default {
     Header,
     Main,
     Footer
-  },
-  methods: {
-    
-    
   }
 }
 </script>
@@ -41,6 +37,4 @@ body{
   margin: 2em auto;
   
 }
-
-
 </style>
