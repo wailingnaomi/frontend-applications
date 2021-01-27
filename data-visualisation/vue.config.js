@@ -1,3 +1,3 @@
 module.exports={
-    publicPath:'/frontend-applications/'
+    publicPath:'/frontend-applications/data-visualisation'
 }
