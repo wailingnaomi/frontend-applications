@@ -9,11 +9,5 @@
 <script>
 export default {
     name: "Conclusion",
-
-    
 }
 </script>
-
-<style  scoped>
-
-</style>

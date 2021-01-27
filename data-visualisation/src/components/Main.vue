@@ -1,9 +1,8 @@
 <template>
     <h1>Wat voor personenauto zien we het meest in Nederland?</h1>
 
-    <section>
-        <p>Nederland staat bekend om het fietsen, we worden wel eens het fietsland genoemd. Maar uit een <a href="https://www.cbs.nl/nl-nl/visualisaties/verkeer-en-vervoer/personen/mobiliteit" target="_blank">onderzoek van het CBS over mobiliteit van personen (2019)</a>, verplaatsen we toch net iets meer met de auto (46 procent) dan met de fiets (28 procent). In wat voor auto rijden we dan?</p>
-    </section>
+    <Introduction />
+
     <section>   
         <h3>In de grafiek hieronder kun je zien welke kleuren en automerken populair zijn onder personenauto’s in Nederland.</h3>
      
@@ -20,23 +19,24 @@
         <p>We zien dat een <strong>grijze</strong> gekleurde auto een favoriet is bij personenauto’s en voor de automerken is dat de <strong>Toyota</strong>. Erg interessant, niet? De vraag is nu; is een grijze Toyota de auto die je het meest ziet in Nederland?</p>
     </section>
    
-    <section>
-        <!-- https://stackoverflow.com/questions/48847644/how-to-bind-img-src-to-data-in-vue -->
-        <img v-bind:src="require('../../public/'+ images[2].src)">
-    </section>
+    <StackedBarchart />
     
     <Conclusion />
 
 </template>
 
 <script>
+import Introduction from './Introduction'
 import Button from './Button';
+import StackedBarchart from './StackedBarchart';
 import Conclusion from './Conclusion'
 
 export default {
     name: "Main",
     components: {
+        Introduction,
         'v-btn' : Button,
+        StackedBarchart,
         Conclusion,
     },
     data(){
@@ -52,11 +52,6 @@ export default {
                 id: 2,
                 src: "barchart-brand.png",
                 alt: "Een staafdiagram over automerken"
-            },
-            {
-                id: 3,
-                src: "stacked-barchart.png",
-                alt: "Een gestapeld staafdiagram over automerken en kleuren"
             }
             ]
         }
