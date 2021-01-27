@@ -34,7 +34,7 @@ import Button from './Button';
 import Conclusion from './Conclusion'
 
 export default {
-    name: "Home",
+    name: "Main",
     components: {
         'v-btn' : Button,
         Conclusion,
